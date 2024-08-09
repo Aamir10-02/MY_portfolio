@@ -8,7 +8,6 @@
 
 .hero-img3::before{
     content: "";
-    /* background: url("https://media.istockphoto.com/id/1563029018/photo/machine-learning-process-artificial-intelligence-ai-machine-learning-and-deep-data-mining.jpg?s=612x612&w=0&k=20&c=VHsqJN4alroYWMT19h365z7_lj7aiccubTAbVHwtgJc="); */
     background: url("https://media.istockphoto.com/id/1805954358/photo/hr-human-resources-recruitment-team-staff-management-business-concept-relationship-management.jpg?s=612x612&w=0&k=20&c=aadgWkUIxFwv0W-ErCZdv80smKVba6neJvviQpOwdrU=");
     background-size: cover;
     background-position: center top;
