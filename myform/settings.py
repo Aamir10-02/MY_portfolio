@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -83,13 +84,14 @@ WSGI_APPLICATION = 'myform.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myportfolio',                  # Name of your database
-        'USER': 'root',                 # Your MySQL username
-        'PASSWORD': 'Aamir10feb99@@',                 # Your MySQL password (if you have one)
-        'HOST': '127.0.0.1',            # Usually 'localhost' or '127.0.0.1'
-        'PORT': '3306',                 # Default MySQL port
+        'NAME': config('DB_NAME', default='myportfolio'),
+        'USER': config('DB_USER', default='root'),
+        'PASSWORD': config('DB_PASSWORD', default=''),
+        'HOST': config('DB_HOST', default='127.0.0.1'),
+        'PORT': config('DB_PORT', default='3306'),
     }
 }
+
 
 
 # Password validation
@@ -136,16 +138,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_ALL_HEADERS=True
 
-
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'aamir2saiyad@gmail.com'
-# EMAIL_HOST_PASSWORD = 'kgqd ieha hagf whah'  # Replace with the 16-character app password
-
-
-from decouple import config
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
