@@ -7,7 +7,7 @@ const Home = () => {
     <div>
       <Navbar/>
       <Heroimage />
-    </div>
+      </div>
   );
 };
 

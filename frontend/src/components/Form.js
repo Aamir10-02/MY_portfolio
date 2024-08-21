@@ -59,6 +59,7 @@ const handleSubmit = async (e) => {
           'X-CSRFToken': csrfToken,
           'Content-Type': 'application/json' // Ensure content type is set
         }
+      
       });
       console.log(response.data);
       setSubmitted(true);

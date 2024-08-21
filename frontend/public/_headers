@@ -1,0 +1,8 @@
+/fonts/*
+  Access-Control-Allow-Origin: *
+
+/images/*
+  Access-Control-Allow-Origin: *
+
+/*
+  Content-Security-Policy: script-src 'self' 'unsafe-eval'
