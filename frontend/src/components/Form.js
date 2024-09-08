@@ -54,7 +54,7 @@ const handleSubmit = async (e) => {
   e.preventDefault();
   if (validate()) {
     try {
-      const response = await axios.post('http://127.0.0.1:8000/form/', formData, {
+      const response = await axios.post('http://13.40.31.120/form', formData, {
         headers: {
           'X-CSRFToken': csrfToken,
           'Content-Type': 'application/json' // Ensure content type is set

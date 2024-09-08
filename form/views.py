@@ -100,6 +100,12 @@ from rest_framework.parsers import JSONParser
 from .models import Form
 from .serializers import FormSerializer
 import json
+# form/views.py
+
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Welcome to the home page!")
 
 @csrf_exempt
 def formApi(request, id=0):
