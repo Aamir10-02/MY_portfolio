@@ -11,12 +11,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY', default='')
 
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'aamirportfolio.online']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'aamirportfolio.online', 'myform-196ae666c6ed.herokuapp.com']
 
 
-CSRF_TRUSTED_ORIGINS = ['https://aamirportfolio.online']
+CSRF_TRUSTED_ORIGINS = ['https://aamirportfolio.online', 'https://myform-196ae666c6ed.herokuapp.com']
 
 
 INSTALLED_APPS = [
@@ -112,8 +112,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    'https://aamirportfolio.online'
-    
+    'https://aamirportfolio.online',
+    'https://myform-196ae666c6ed.herokuapp.com'
 ]
 
 CORS_ALLOW_ALL_HEADERS = True
