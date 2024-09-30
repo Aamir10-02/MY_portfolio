@@ -11,13 +11,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY', default='')
 
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'aamirportfolio.online', 'myform-196ae666c6ed.herokuapp.com']
+# ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'aamirportfolio.online', 'myform-196ae666c6ed.herokuapp.com']
 
-
-CSRF_TRUSTED_ORIGINS = ['https://aamirportfolio.online', 'https://myform-196ae666c6ed.herokuapp.com']
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+# CSRF_TRUSTED_ORIGINS = ['https://aamirportfolio.online', 'https://myform-196ae666c6ed.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:3000']
 
 INSTALLED_APPS = [
     'corsheaders',
@@ -73,7 +73,10 @@ DATABASES = {
         'PORT': config('DB_PORT', default='3306'),
     }
 }
-DATABASES['default'].update(dj_database_url.config(conn_max_age=600, ssl_require=True))
+
+
+
+# DATABASES['default'].update(dj_database_url.config(conn_max_age=600, ssl_require=True))
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -112,9 +115,10 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    'https://aamirportfolio.online',
-    'https://myform-196ae666c6ed.herokuapp.com'
-]
+#    'https://aamirportfolio.online',
+#    'https://myform-196ae666c6ed.herokuapp.com',
+     'http://localhost:3000',
+ ]
 
 CORS_ALLOW_ALL_HEADERS = True
 
@@ -126,7 +130,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+
 
 
 django_heroku.settings(locals())
