@@ -1,0 +1,4 @@
+*.exe
+*.gz
+*.png
+frontend/  
