@@ -1,14 +1,16 @@
+# My Portfolio Website
+
 Welcome to my portfolio website! This project showcases my skills, projects, and experience as a developer. It is built using React for the frontend and Django for the backend, with a MySQL database hosted on AWS RDS.
 
 ## Table of Contents
 
-- [Features]
-- [Technologies Used]
-- [Installation]
-- [Usage]
-- [API Endpoints]
-- [Contributing]
-- [License]
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Features
 
