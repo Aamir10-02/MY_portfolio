@@ -29,3 +29,7 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 
 - **Database:**
   - MySQL (hosted on AWS RDS)
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/Aamir10-02/My_portfolio/tree/main?tab=MIT-1-ov-file) file for details.
